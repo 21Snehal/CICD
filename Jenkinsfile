@@ -8,11 +8,11 @@ pipeline {
 		      }}
 		stage('Build') {
 	           steps {
-			  sh '/home/snehal/Documents/New-Software/apache-maven-3.9.4-bin/mvn install'
+			  sh '/home/snehal/Documents/Software/apache-maven-3.9.3/bin/mvn install'
 	                 }}
 		stage('Deployment'){
 		    steps {
-			sh 'cp target/CICD.war /home/snehal/Documents/New-Software/apache-tomcat-9.0.76/webapps'
+			sh 'cp target/CICD.war /home/snehal/Documents/Software/apache-tomcat-9.0.76/webapps'
 			}}
 			stage('Docker build'){
 		    steps {
